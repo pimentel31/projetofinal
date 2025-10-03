@@ -1,0 +1,45 @@
+/* Fundo geral */
+body {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar-clinica {
+    background-color: #198754 !important; /* verde veterinária */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-clinica .nav-link {
+    font-weight: 500;
+    transition: 0.3s;
+}
+.navbar-clinica .nav-link:hover {
+    color: #ffc107 !important; /* amarelo no hover */
+}
+
+/* Card de pets */
+.pet-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do pet */
+.pet-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Botões */
+.btn-warning {
+    font-weight: bold;
+}
+.btn-danger {
+    font-weight: bold;
+}

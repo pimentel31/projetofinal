@@ -1,0 +1,68 @@
+/* Centraliza o card na tela */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212; /* fundo escuro */
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card principal */
+.card {
+  max-width: 500px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  padding: 30px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4c4c; /* vermelho destaque */
+}
+
+/* Subtítulo (código do produto) */
+h4 {
+  font-size: 1.2rem;
+  color: #ffc107; /* amarelo destaque */
+}
+
+/* Botões */
+.btn {
+  min-width: 150px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Botão confirmar */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Botão cancelar */
+.btn-outline-light {
+  border: 2px solid #fff;
+}
+.btn-outline-light:hover {
+  background-color: #f8f9fa;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Mensagem de alerta */
+.alert-danger {
+  font-size: 0.95rem;
+  border-radius: 10px;
+}

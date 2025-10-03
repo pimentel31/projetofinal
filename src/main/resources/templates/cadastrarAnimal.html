@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastrar Animal</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- favicon -->
+  <link href="img/clinica-veterinaria.png" rel="shortcut icon" type="image/png">
+
+  <!-- css externo -->
+  <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body class="bg-dark" data-bs-theme="dark">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg mb-5 navbar-cadastro" data-bs-theme="dark" style="background-color: #16161d;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="img/clinica-veterinaria.png" alt="Ícone da clínica" width="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Cadastrar Animais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/listarAnimais">Listar Animais</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- fim do navbar -->
+
+  <!-- container -->
+  <div class="container">
+    <h1>Cadastro de Animal</h1>
+    <hr class="mb-5">
+
+    <!-- form -->
+    <form method="POST" action="/cadastrarAnimais" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-8">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Nome do Animal</span>
+            <input type="text" name="nome" class="form-control" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Espécie</span>
+            <select name="especie" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Cachorro">Cachorro</option>
+              <option value="Gato">Gato</option>
+              <option value="Ave">Ave</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Raça</span>
+            <input type="text" name="raca" class="form-control" required>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Idade</span>
+            <input type="number" name="idade" class="form-control" min="0" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Sexo</span>
+            <select name="sexo" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Macho">Macho</option>
+              <option value="Fêmea">Fêmea</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-8">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Nome do Tutor</span>
+            <input type="text" name="tutor" class="form-control" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Telefone</span>
+            <input type="tel" name="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Email</span>
+            <input type="email" name="email" class="form-control" placeholder="email@exemplo.com">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Observações</span>
+            <textarea name="observacoes" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-8">
+          <div class="input-group mb-4">
+            <span class="input-group-text">Foto do Animal</span>
+            <input type="file" name="foto" accept="image/jpeg,image/webp,image/png" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <button type="submit" class="btn btn-primary">Cadastrar Animal</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- fim do container -->
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="https://thymeleaf.org" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excluir Produto</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- CSS externo -->
+  <link href="/css/excluir.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="bg-dark text-light">
+
+  <div class="container mt-5">
+    <div class="card shadow-lg bg-secondary text-light">
+      <div class="card-body text-center">
+        <h1 class="mb-4">⚠ Deseja excluir o produto?</h1>
+        <h4 class="mb-4">
+          Produto código: <span class="fw-bold text-warning" th:text="${produto.idSuplementos}"></span>
+        </h4>
+
+        <div class="alert alert-danger">
+          Esta ação <b>não pode ser desfeita</b>.
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <a class="btn btn-success btn-lg"
+             th:href="@{'/excluirSuplementos?idSuplementos=' + ${produto.idSuplementos}}">
+             ✅ Sim, excluir
+          </a>
+          <a class="btn btn-outline-light btn-lg" href="/listarSuplementos">
+             ❌ Não, cancelar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+</body>
+</html>

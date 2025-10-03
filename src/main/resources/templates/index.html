@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Veterinária</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- favicon -->
+  <link href="img/clinica-veterinaria.png" rel="shortcut icon" type="image/png">
+
+  <!-- css externo -->
+  <link href="css/estilo-clinica.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-clinica">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white" href="/">
+        <img src="img/clinica-veterinaria.png" alt="Ícone da clínica" width="40" height="40" class="me-2">
+        Clínica Veterinária
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active text-warning fw-bold" href="/">🏠 Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/cadastrarPet">➕ Cadastrar Pet</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/listarPets">📋 Listar Pets</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- fim navbar -->
+
+  <!-- carrossel -->
+  <div id="carouselClinica" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/clinica.png" class="d-block w-100" alt="Clínica Veterinária" style="height: 450px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold text-white bg-dark bg-opacity-50 p-2 rounded">Bem-vindo à Clínica Veterinária</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/pet.jpg" class="d-block w-100" alt="Pets felizes" style="height: 450px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold text-white bg-dark bg-opacity-50 p-2 rounded">Cuidando com carinho dos seus pets</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/getty.jpg" class="d-block w-100" alt="Equipe veterinária" style="height: 450px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="fw-bold text-white bg-dark bg-opacity-50 p-2 rounded">Profissionais especializados para seu animal</h3>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselClinica" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselClinica" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!-- fim carrossel -->
+
+  <!-- seção sobre -->
+  <div class="container text-center mb-5">
+    <h2 class="text-success fw-bold mb-3">Nossa missão</h2>
+    <p class="lead">Oferecer atendimento veterinário de qualidade, com amor e dedicação, para garantir o bem-estar e a saúde dos seus pets.</p>
+  </div>
+
+  <!-- cards serviços -->
+  <div class="container mb-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="img/pet.jpg" class="card-img-top" alt="Consultas">
+          <div class="card-body">
+            <h5 class="card-title text-success">Consultas</h5>
+            <p class="card-text">Atendimento clínico com profissionais especializados em diversas espécies de animais.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="img/getty.jpg" class="card-img-top" alt="Exames">
+          <div class="card-body">
+            <h5 class="card-title text-success">Exames</h5>
+            <p class="card-text">Laboratório completo para diagnósticos rápidos e precisos para seu pet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="img/clinica.png" class="card-img-top" alt="Cirurgias">
+          <div class="card-body">
+            <h5 class="card-title text-success">Cirurgias</h5>
+            <p class="card-text">Estrutura moderna para cirurgias seguras e acompanhamento pós-operatório.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- rodapé -->
+  <footer class="text-center p-4 bg-success text-white">
+    <p class="mb-0">&copy; 2025 Clínica Veterinária - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
